@@ -1,0 +1,31 @@
+* {
+  font-family: "Roboto Condensed";
+  font-weight: 300;
+  color: #ddd;
+}
+body {
+  text-transform: uppercase;
+  padding: 1em;
+  margin: 0 auto;
+}
+#end {
+  text-align: right;
+  font-size: 24px;
+  font-weight: 500;
+}
+a {
+  color: rgba(0,0,0,.6);
+  transition: color .1s ease-out;
+  text-decoration: none;
+  background-image: linear-gradient(transparent 50%, rgba(0,0,0,.6) 50%);
+  background-size: 4px 4px;
+  background-position: 0 1em;
+  background-repeat: repeat-x;
+}
+a:hover {
+  color: white;
+  background-image: linear-gradient(transparent 50%, white 50%);
+}
+.pad {
+  padding: 2rem 0;
+}
