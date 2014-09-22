@@ -32,7 +32,7 @@ var renderWords = function() {
 
   // Fitter & Happier
   var nodes = document.querySelectorAll('[class="heading"]');
-  fitterHappierText(nodes, {baseline: 13, paddingY: 2});
+  fitterHappierText(nodes);
 };
 
 var renderFooter = function() {
@@ -53,6 +53,6 @@ var words = [
   , "Can't be sleepin'_Keep on wakin'_Is that the woman next to me?_Guilt is burning_Inside I'm hurting_This ain't a feeling I can't keep_So blame it on the night_Don't blame it on me_Don't blame it on me_Blame it on the night_Don't blame it on_Me"
   , "Hollow ground and I keep on falling_Breathing in but_It's not enough_When I drown my eyes in the river flowing _You said you'll stay_Just a little more _'Cause the fate is untold_I still hear it calling _But something is wrong _The teardrops are falling _Just before they_Hit the ground _Oh when I hear you say _Oh when I hear you say _Don't give it up, don't give it up_It's glorious."
   , "Stand up_We shall not be moved_Except by a child with no socks and shoes_If you've got more to give_Then you've got to prove_Put your hands up and I'll copy you_Stand up_We shall not be moved_Unless were taking a route _We have not pursued_So if you've got a dream and _A lot to do_Put your hands up"
-  , "I was a boat_Drifting out into sea_I had nothing but_Pieces of thoughts of the hope_That you would see me_I was a stone’s throw away_From la-aaa-aaa-aa-nd_But thousands and thousands_Of miles away_From reaching your hand_The waves that crashed upon_The rocks that you were trying to step along_And in my head I_Heard them play a song_For you and me_Let’s get loo-ooo-oo-ost _At See-eee-eee-ee-eea_Where they will never find us_Got stars at night to guide us."
+  , "I was a boat_Drifting out into sea_I had nothing but_Pieces of thoughts of the hope_That you would_See me_I was a stone’s throw away_From la-aaa-aaa-aa-nd_But thousands and thousands_Of miles away_From reaching your hand_The waves that crashed upon_The rocks that you were trying to step along_And in my head I_Heard them play a song_For you and me_Let’s get loo-ooo-oo-ost _At See-eee-eee-ee-eea_Where they will never find us_Got stars at night to guide us."
   , "And the heart is hard to translate_It has a language of its own_It talks in tongues_And quiet sighs,_And prayers and proclamations_In the grand days of great men _And the smallest of gestures_And short, shallow, gasps._But with all my education_I can’t seem to command it_And the words are_All escaping,_And coming back all damaged_And I would put them back in poetry if I_Only knew how I can’t seem to_Understand it and I would _Give all this _And heaven too_I would give it all if only for a moment_That I could just_Understand the meaning_Of the word you see_‘Cause I’ve been scrawling it forever _But it never_Makes sense_To me at all"
 ];
