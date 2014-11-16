@@ -38,7 +38,10 @@ var renderWords = function() {
 
 var renderFooter = function() {
   var paranoia = '&#109;&#65;&#73;&#76;&#84;&#79;&#58;&#104;&#105;&#64;&#118;&#115;&#122;&#46;&#109;&#101;&#63;&#115;&#117;&#98;&#106;&#101;&#99;&#116;&#61;&#65;&#100;&#100;&#37;&#50;&#48;&#109;&#111;&#114;&#101;&#37;&#50;&#48;&#119;&#111;&#114;&#100;&#115;';
-  $('#end').html('give it <a href="#" role="refresh">another go</a> suggest some <a href="' + paranoia + '">new words</a> made with love <a href="http://www.victorszeto.com/">by vis</a>');
+  var footer = ['give it <a href="#" role="refresh">another go</a>',
+                ' suggest some <a href="' + paranoia + '">new words</a>',
+                ' made with love <a href="http://www.victorszeto.com/">by vis</a>'];
+  $('#end').html(footer.join('<br class="s">'));
 };
 
 var insertWords = function(text) {
