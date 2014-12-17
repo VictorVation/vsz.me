@@ -15,27 +15,52 @@ h2 { font-size: 2.4rem; letter-spacing: .1rem }
 small {
   font-size:2rem;
 }
-#wrapper {
-   width: 600px;
-   height: 600px;
+  #wrapper {
+   width: 300px;
+   height: 300px;
    margin: 0 auto;
    position: absolute;
    left: 50%;
    top: 50%;
-   margin-left: -300px;
-   margin-top: -300px;
+   margin-left: -150px;
+   margin-top: -150px;
    text-align: center
+  }
+#me {
+  position: absolute;
+  right: 5rem;
+  bottom: 5rem;
+  color: rgba(255, 255, 255, .3);
+  font-size: 1rem;
 }
 
+svg, #me {
+  user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
 ::selection {
    background: #eee;
 }
 
 @media (min-width: 768px) {
-  h1 { font-size: 8.0rem; }
+  h1 { font-size: 6.0rem; }
   h2 { font-size: 4.2rem; }
+
+  #wrapper {
+   width: 500px;
+   height: 500px;
+   margin: 0 auto;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   margin-left: -250px;
+   margin-top: -250px;
+   text-align: center
+ }
 }
 @media (min-width: 1200px) {
-  h1 { font-size: 10rem; }
+  h1 { font-size: 9rem; }
   h2 { font-size: 5.8rem; }
 }

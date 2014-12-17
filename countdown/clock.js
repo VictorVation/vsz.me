@@ -34,7 +34,6 @@
     var now = formatTime(new Date()),
       colourNow = '#' + now.join(''),
       timeNow = now[0] + '<small>h</small> ' + now[1] + '<small>m</small> ' + now[2] + '<small>s</small>';
-      console.log(now)
     $time.innerHTML = timeNow;
     $hex.innerHTML = colourNow;
     $body.style.background = colourNow;
