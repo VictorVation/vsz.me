@@ -18,7 +18,8 @@
 
     return [hours, minutes, seconds]
       .map(function(t) {
-        return t < 10 ? '0' + t : t;
+        var mag = Math.abs(t);
+        return mag < 10 ? '0' + mag : mag;
       });
   };
 
@@ -33,11 +34,11 @@
   var tick = function() {
     var now = formatTime(new Date()),
       colourNow = '#' + now.join(''),
-      timeNow = now[0] + '<small>h</small> ' + now[1] + '<small>m</small> ' + now[2] + '<small>s</small>';
+      timeNow = '-' + now[0] + '<small>h</small> -' + now[1] + '<small>m</small> -' + now[2] + '<small>s</small>';
     $time.innerHTML = timeNow;
     $hex.innerHTML = colourNow;
     $body.style.background = colourNow;
-    document.title = now[0] + 'h ' + now[1] + 'm ' + now[2] + 's' + ' LEFT IN 2A';
+    document.title = now[0] + 'h ' + now[1] + 'm ' + now[2] + 's' + ' SINCE 2A ENDED';
     swapFavicon(colourNow);
 
     setTimeout(tick, 1000);
