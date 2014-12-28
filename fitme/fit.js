@@ -15,8 +15,10 @@ return c}n.extend({hasData:function(a){return M.hasData(a)||L.hasData(a)},data:f
 
 Waves.displayEffect({duration: 550});
 
+var colour = Please.make_color({value: .95});
+
 $('button')
-  .css('backgroundColor', Please.make_color({value: .95}))
+  .css('backgroundColor', colour)
   .on('click', function(ev){
   setTimeout(function() {
     renderWords();
@@ -90,3 +92,15 @@ var escapeHtml = function (string) {
     return entityMap[s];
   });
 }
+
+var swapFavicon = function(color) {
+  var $canvas = $('canvas').get(0),
+    $favicon= $('link[rel="shortcut icon"]').get(0);
+
+  context = $canvas.getContext('2d');
+  context.fillStyle = color;
+  context.fillRect(0, 0, 16, 16);
+  $favicon.href = $canvas.toDataURL();
+  $favicon.type = "image/x-icon";
+};
+swapFavicon(colour);

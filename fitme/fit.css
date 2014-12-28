@@ -1,3 +1,9 @@
+canvas {
+  display: none;
+}
+.toasty {
+  opacity: 0;
+}
 /*!
  * Waves v0.6.0-dev
  * http://fian.my.id/Waves
@@ -123,7 +129,6 @@ textarea {
 .pad {
   padding: 2rem 0;
 }
-
 @media screen and (max-width: 1100px) {
   br.s {
     display: block;
