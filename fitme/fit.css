@@ -92,7 +92,9 @@ textarea {
   outline: none;
   box-shadow: none;
   overflow: none;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
 
 .toasty {
   transition: background-color 0.1s ease-in-out,
