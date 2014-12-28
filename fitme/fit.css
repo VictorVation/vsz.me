@@ -84,7 +84,6 @@ textarea {
   text-align: center;
   width: 100%;
   padding: 2rem 0.5rem; /* The 6px vertically centers text on FF, ignored by Webkit */
-  background-color: #fff;
   resize: none;
   color: #555;
   background-color: #eee;
@@ -95,17 +94,28 @@ textarea {
   overflow: none;
   box-sizing: border-box; }
 
-.ink {
-  display: block; position: absolute;
-  background: hsl(180, 40%, 80%);
-  border-radius: 100%;
-  transform: scale(0);
+.toasty {
+  transition: background-color 0.1s ease-in-out,
+    opacity 0.4s ease;
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  width: 30%;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  float: center;
+  color: #555;
+  background-color: #ff6e40;
+  border-radius: 4px;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  cursor: pointer;
+  opacity: 0;
 }
-/*animation effect*/
-.ink.animate {animation: ripple 0.65s linear;}
-@keyframes ripple {
-  /*scale the element to 250% to safely cover the entire link and fade it out*/
-  100% {opacity: 0; transform: scale(2.5);}
+
+.toasty:hover {
+  background-color: #ff9e80;
 }
 
 .pad {

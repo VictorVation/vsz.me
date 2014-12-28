@@ -35,14 +35,10 @@ $('textarea')
 var renderWords = function() {
 
   // If the textarea is empty, you're wrong.
-  if ($('textarea').val() == '') { return; }
-
-  // Add our background colours
-  var prop = "linear-gradient(" +
-    Please.make_color({colors_returned: 2}).join(',') +
-    ")";
-
-  $('body').css('background', prop)
+  if ($('textarea').val() == '') {
+    showToast();
+    return;
+  }
 
   // Insert your words
   var text = $('textarea').val().replace(/\n/g, '_');
@@ -54,7 +50,19 @@ var renderWords = function() {
     .map(function(s) { return s.trim() })
     .map(escapeHtml);
 
+  if(words.every(function(x) {return x === ''})) {
+    showToast();
+    return;
+  }
+
   $('#words').html(startTag + words.join(endTag+startTag) + endTag);
+
+  // Add our background colours
+  var prop = "linear-gradient(" +
+    Please.make_color({colors_returned: 2}).join(',') +
+    ")";
+
+  $('body').css('background', prop)
 
   // Fitter & Happier
   var nodes = document.querySelectorAll('[class="heading"]');
@@ -63,6 +71,12 @@ var renderWords = function() {
   $('#end').addClass('pad');
 };
 
+var showToast = function() {
+  $('.toasty').css('opacity', 1).on('click', function(){$(this).css('opacity', 0)});
+  setTimeout(function() {
+    $('.toasty').css('opacity', 0)
+  }, 3000);
+}
 var escapeHtml = function (string) {
   var entityMap = {
   "&": "&amp;",
