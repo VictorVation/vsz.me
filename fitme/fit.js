@@ -74,7 +74,9 @@ var renderWords = function() {
 };
 
 var showToast = function() {
-  clearTimeout(toasted);
+  if(typeof toasted !== 'undefined') {
+    clearTimeout(toasted);
+  }
   $('.toasty').css('opacity', 1).on('click', function(){$(this).css('opacity', 0)});
   toasted = setTimeout(function() {
     $('.toasty').css('opacity', 0)
