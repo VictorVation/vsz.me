@@ -39,8 +39,7 @@ var renderWords = function() {
 
   // Add our background colours
   var prop = "linear-gradient(" +
-    $('button').css('backgroundColor') + ',' +
-    Please.make_color() +
+    Please.make_color({colors_returned: 2}).join(',') +
     ")";
 
 console.log(prop);

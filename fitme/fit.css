@@ -60,7 +60,7 @@ button, .button {
   position: relative;
   display: inline-block;
   /*height: 38px;*/
-  padding: 30px 30px;
+  padding: 20px 20px;
   color: #555;
   text-align: center;
   font-size: 2.0rem;
@@ -76,12 +76,12 @@ button, .button {
   cursor: pointer;
   outline: none;
   box-sizing: border-box;
-  margin: 38px;
+  margin: 30px;
   background-color: #bada55;
   float: right; }
 
 textarea {
-  transition: height 0.4s cubic-bezier(.55,0,.1,1);
+  transition: height 0.2s cubic-bezier(.55,0,.1,1);
   font-size: 5.0rem;
   text-align: center;
   width: 100%;
