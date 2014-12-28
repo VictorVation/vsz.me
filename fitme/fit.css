@@ -56,7 +56,7 @@ br.s {
   src: url(victorszeto.com/fonts/RobotoCondensed-Regular.eot);
   src: local('Roboto Condensed Regular'), local('RobotoCondensed-Regular'), url(victorszeto.com/fonts/RobotoCondensed-Regular.eot) format('embedded-opentype'), url(victorszeto.com/fonts/RobotoCondensed-Regular.woff) format('woff');
 }
-button, .button {
+button {
   position: relative;
   display: inline-block;
   /*height: 38px;*/
@@ -70,14 +70,12 @@ button, .button {
   text-transform: uppercase;
   text-decoration: none;
   white-space: nowrap;
-  background-color: transparent;
   border-radius: 4px;
   border: none;
   cursor: pointer;
   outline: none;
   box-sizing: border-box;
   margin: 30px;
-  background-color: #bada55;
   float: right; }
 
 textarea {

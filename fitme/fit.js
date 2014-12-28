@@ -15,14 +15,6 @@ return c}n.extend({hasData:function(a){return M.hasData(a)||L.hasData(a)},data:f
 
 Waves.displayEffect({duration: 550});
 
-$('textarea')
-  .autosize()
-  .on('keydown', function(ev) {
-  if(ev.keyCode === 13 && (ev.metaKey || ev.ctrlKey)) {
-    $('button').click();
-  }
-});
-
 $('button')
   .css('backgroundColor', Please.make_color({value: .95}))
   .on('click', function(ev){
@@ -30,6 +22,14 @@ $('button')
     renderWords();
   }, 400);
   return false;
+});
+
+$('textarea')
+  .autosize()
+  .on('keydown', function(ev) {
+  if(ev.keyCode === 13 && (ev.metaKey || ev.ctrlKey)) {
+    $('button').click();
+  }
 });
 
 var renderWords = function() {
@@ -42,8 +42,6 @@ var renderWords = function() {
     Please.make_color({colors_returned: 2}).join(',') +
     ")";
 
-console.log(prop);
-
   $('body').css('background', prop)
 
   // Insert your words
@@ -53,7 +51,8 @@ console.log(prop);
 
   var words = text.split('_')
     .filter(function(s) { return s !== ''})
-    .map(function(s) { return s.trim() });
+    .map(function(s) { return s.trim() })
+    .map(escapeHtml);
 
   $('#words').html(startTag + words.join(endTag+startTag) + endTag);
 
@@ -63,3 +62,17 @@ console.log(prop);
 
   $('#end').addClass('pad');
 };
+
+var escapeHtml = function (string) {
+  var entityMap = {
+  "&": "&amp;",
+  "<": "&lt;",
+  ">": "&gt;",
+  '"': '&quot;',
+  "'": '&#39;',
+  "/": '&#x2F;'
+};
+  return String(string).replace(/[&<>"'\/]/g, function (s) {
+    return entityMap[s];
+  });
+}
