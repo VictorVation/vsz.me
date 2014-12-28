@@ -18,7 +18,7 @@ Waves.displayEffect({duration: 550});
 $('textarea')
   .autosize()
   .on('keydown', function(ev) {
-  if(ev.keyCode == 13 && (ev.metaKey || ev.ctrlKey)) {
+  if(ev.keyCode === 13 && (ev.metaKey || ev.ctrlKey)) {
     $('button').click();
   }
 });
@@ -33,25 +33,30 @@ $('button')
 });
 
 var renderWords = function() {
+
+  // If the textarea is empty, you're wrong.
   if ($('textarea').val() == '') { return; }
 
   // Add our background colours
-  var clrs = Please.make_color({
-    colors_returned: 2
-  })
-  var prop = "linear-gradient(" + clrs[0] + "," + clrs[1] + ")";
+  var prop = "linear-gradient(" +
+    $('button').css('backgroundColor') + ',' +
+    Please.make_color() +
+    ")";
+
+console.log(prop);
+
   $('body').css('background', prop)
 
-  // Insert my words
+  // Insert your words
   var text = $('textarea').val().replace(/\n/g, '_');
   var startTag = '<div class="heading">';
   var endTag = '</div>';
-  var html = text.split('_')
-    .filter(function(s) { return s !== ''})
-    .map(function(s) { return s.trim() })
-    .join(endTag+startTag);
 
-  $('#words').html(startTag + html + endTag);
+  var words = text.split('_')
+    .filter(function(s) { return s !== ''})
+    .map(function(s) { return s.trim() });
+
+  $('#words').html(startTag + words.join(endTag+startTag) + endTag);
 
   // Fitter & Happier
   var nodes = document.querySelectorAll('[class="heading"]');
