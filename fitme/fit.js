@@ -74,11 +74,13 @@ var renderWords = function() {
 };
 
 var showToast = function() {
+  clearTimeout(toasted);
   $('.toasty').css('opacity', 1).on('click', function(){$(this).css('opacity', 0)});
-  setTimeout(function() {
+  toasted = setTimeout(function() {
     $('.toasty').css('opacity', 0)
   }, 3000);
 }
+
 var escapeHtml = function (string) {
   var entityMap = {
   "&": "&amp;",
@@ -104,3 +106,11 @@ var swapFavicon = function(color) {
   $favicon.type = "image/x-icon";
 };
 swapFavicon(colour);
+
+(function(i,s,o,g,r,a,m){i['\x47\x6F\x6F\x67\x6C\x65\x41\x6E\x61\x6C\x79\x74\x69\x63\x73\x4F\x62\x6A\x65\x63\x74']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','\x2F\x2F\x77\x77\x77\x2E\x67\x6F\x6F\x67\x6C\x65\x2D\x61\x6E\x61\x6C\x79\x74\x69\x63\x73\x2E\x63\x6F\x6D\x2F\x61\x6E\x61\x6C\x79\x74\x69\x63\x73\x2E\x6A\x73','ga');
+
+ga('create', '\x55\x41\x2D\x34\x36\x36\x32\x34\x36\x34\x37\x2D\x31', 'auto');
+ga('send', 'pageview');
