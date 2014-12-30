@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>hasher</title>
+  <meta name="author" content="Victor Szeto">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/hasher.min.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="https://victorszeto.com/favicon.ico">
+
+</head>
+<body>
+
+  <!-- Hasher
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="row">
+      <div class="one-half" style="margin-top: 10%">
+        <h4>hasher<span class="teal-text">&mdash;</span></h4>
+      </div>
+    </div>
+    <div class="row">
+      <form>
+        <div class="row">
+          <div class="six columns">
+            <label for="key">key</label>
+            <input class="u-full-width" type="password" id="key" placeholder="key">
+          </div>
+          <div class="six columns">
+            <label for="domain">domain</label>
+            <input class="u-full-width" type="text" id="domain" placeholder="domain">
+          </div>
+        </div>
+        <label for="hash">hash</label>
+        <input class="u-full-width" type="text" id="hash" placeholder="hash">
+      </form>
+    </div>
+    <div class="row">
+      <div class="one-third center column">with &lt;3 by <a href="https://www.victorszeto.com">vis</a></div>
+      <div class="one-third center column">based on <a href="https://github.com/boyers/hashpass">boyers/hashpass</a></div>
+      <div class="one-third center column">check out the <a href="https://www.github.com/victorvation/vsz.me/pass">source</a></div>
+    </div>
+  </div>
+
+<!-- JavaScript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/sjcl.js"></script>
+  <script src="js/hasher.js"></script>
+</body>
+</html>
