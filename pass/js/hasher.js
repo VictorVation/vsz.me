@@ -5,7 +5,7 @@
   var $hash = $('#hash');
 
   var update = function() {
-    console.log('hello');
+
     // Compute the first 16 base64 characters of iterated-SHA-256(domain + '/' + key, 2 ^ difficulty).
     var key = $key.value;
     var domain = $domain.value;
@@ -35,13 +35,13 @@
     timeout = setTimeout((function() {
       update();
       timeout = null;
-    }), 300);
+    }), 200);
   }
 
   // Add our event listeners.
-  'propertychange change keyup input paste'.split(' ').map(function(e) {
-    [$key, $domain].map(function(ev) {
-      return this.addEventListener(e, debouncedUpdate, false)
+  'propertychange change keyup input paste'.split(' ').map(function(ev) {
+    [$key, $domain].map(function(el) {
+      return el.addEventListener(ev, debouncedUpdate);
     });
   });
 })();
