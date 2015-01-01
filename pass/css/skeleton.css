@@ -52,6 +52,9 @@
 @media (min-width: 550px) {
   .container {
     width: 80%; }
+  .section {
+  padding-top: 1rem;
+  padding-bottom: 2rem; }
   .column,
   .columns {
     margin-left: 4%; }
@@ -110,6 +113,10 @@
   .offset-by-one-half.column,
   .offset-by-one-half.columns     { margin-left: 52%; }
 
+  .footer.row {
+    margin-top: 20px;
+    padding: 20px 0 40px;
+  }
 }
 
 
@@ -154,7 +161,7 @@ h6 { font-size: 1.5rem; line-height: 1.6;  letter-spacing: 0; }
 p {
   margin-top: 0; }
 
-.center {
+.center-text {
   text-align: center;
 }
 
@@ -168,6 +175,10 @@ p {
 
 ::selection {
     background: #b2dfdb;
+}
+
+.main.row {
+  /*margin-bottom: 3rem;*/
 }
 
 /* Links
@@ -221,8 +232,8 @@ input[type="submit"].button-primary,
 input[type="reset"].button-primary,
 input[type="button"].button-primary {
   color: #FFF;
-  background-color: #33C3F0;
-  border-color: #33C3F0; }
+  background-color: #1de9b6;
+  border-color: #1de9b6; }
 .button.button-primary:hover,
 button.button-primary:hover,
 input[type="submit"].button-primary:hover,
@@ -234,8 +245,8 @@ input[type="submit"].button-primary:focus,
 input[type="reset"].button-primary:focus,
 input[type="button"].button-primary:focus {
   color: #FFF;
-  background-color: #1EAEDB;
-  border-color: #1EAEDB; }
+  background-color: #0097a7;
+  border-color: #0097a7; }
 
 
 /* Forms
@@ -394,6 +405,18 @@ hr {
   border-width: 0;
   border-top: 1px solid #E1E1E1; }
 
+.show {
+  transition: max-height 0, opacity 400ms;
+  opacity: 1;
+  max-height: 500 rem;
+  overflow: visible;
+}
+.hide {
+  transition: max-height 500ms, opacity 400ms;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+}
 
 /* Clearing
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -406,7 +429,9 @@ hr {
   display: table;
   clear: both; }
 
-
+.main form {
+  margin-bottom: 0;
+}
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
@@ -421,13 +446,25 @@ there.
 @media (min-width: 400px) {}
 
 /* Larger than phablet (also point when grid becomes active) */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+  .hero-heading {
+    font-size: 2.4rem;
+  }
+}
 
 /* Larger than tablet */
-@media (min-width: 750px) {}
+@media (min-width: 750px) {
+  .hero-heading {
+    font-size: 2.6rem;
+  }
+}
 
 /* Larger than desktop */
-@media (min-width: 1000px) {}
+@media (min-width: 1000px) {
+  .hero-heading {
+    font-size: 3.0rem;
+  }
+}
 
 /* Larger than Desktop HD */
 @media (min-width: 1200px) {}

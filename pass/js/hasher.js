@@ -1,8 +1,20 @@
 (function () {
   var $ = document.querySelector.bind(document);
   var $key = $('#key');
-  var $domain = $('#domain');
+  var $site = $('#site');
   var $hash = $('#hash');
+  var $show = $('[role=show]');
+  var $info = $('.info');
+
+  // $show.addEventListener('click', function(ev){
+  //     ev.stopPropagation();
+  //     ev.preventDefault();
+  //     $show.blur();
+  //     $show.textContent = $show.textContent === 'done' ? 'Learn more' : 'done';
+
+  //     $info.classList.toggle('hide');
+  //     $info.classList.toggle('show');
+  // })
 
   var update = function() {
 
