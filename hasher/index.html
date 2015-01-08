@@ -1,64 +1,99 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
-  <title>MapleRoyals Prices</title>
-  <link rel="icon" href="http://vsz.me/i/maple.ico" type="image/x-icon" />
-  <link rel="stylesheet" href="css/prices-a140a874.css">
+
+  <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta charset="utf-8">
+  <title>hasher</title>
+  <meta name="author" content="Victor Szeto">
+
+  <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/skeleton.css">
+
+  <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <link rel="icon" type="image/png" href="img/favicon.ico">
+
 </head>
 <body>
-  <div class="section">
-    <div class="container">
-      <h1 class="header center deep-purple-text lighten-1">MapleRoyals Scroll Prices</h1>
-      <br><br>
+
+  <!-- Hasher
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <div class="container">
+    <div class="section">
       <div class="row">
-        <input class="z-depth-2 grey-text darken-3" type="text" role="prices" id="search" required autofocus autocomplete="off" placeholder="search for an item...">
-      </div>
-      <div class="row">
-        <div class="col s12 m6">
-          <div class="card-panel red lighten-1 z-depth-2">
-            <h5 class="white-text">Kaizoku Price</h4>
-            <h4 class="white-text center" role="price__k">&nbsp;</h5>
-            <p class="grey-text lighten-2 small">Last updated 11/16/2014</p>
-          </div>
-        </div>
-        <div class="col s12 m6">
-          <div class="card-panel cyan z-depth-2">
-            <h5 class="white-text">Plenty Price</h4>
-            <h4 class="white-text center" role="price__p">&nbsp;</h5>
-            <p class="grey-text lighten-2 small">Last updated 12/22/2014</p>
-          </div>
+        <div class="one-half" style="margin-top: 2.2222%">
+          <h4>hasher <span class="teal-text">-</span> a deterministic password <span class="teal-text">re</span>generator.</h4>
         </div>
       </div>
+      <div class="main row">
+        <form>
+          <div class="row">
+            <div class="six columns">
+              <label for="key">key</label>
+              <input class="u-full-width" type="password" id="key" placeholder="memorize this. longer is better." autocomplete="false">
+            </div>
+            <div class="six columns">
+              <label for="site">site</label>
+              <input class="u-full-width" type="text" id="site" placeholder="include the domain." autocomplete="false">
+            </div>
+          </div>
+          <label for="hash">hash</label>
+          <input class="u-full-width" type="text" id="hash" placeholder="use this as your password." autocomplete="false">
+        </form>
+      </div>
+    </div>
+    <div class="section">
+      <div class="row">
+        <div class="one-half column">
+            <h5>Unique passwords are hard to remember.<br>Hasher lets you <b>safely</b> re-use passwords.</h5>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="row">
+        <div class="one-third center-text column">
+          <div class="ic ic-autorenew"></div>
+          <h4>deterministic</h4>
+          <p>As long as you enter the same key+site combination, you will always (re)generate the same password. Never forget your password again.</p>
+        </div>
+        <div class="one-third center-text column">
+          <div class="ic ic-cloud-off"></div>
+          <h4>stateless</h4>
+          <p>Hasher never saves, syncs, sends or stores anything. Everything is done clientside. Even if somebody steals your computer, they can't get your passwords.</p>
+        </div>
+        <div class="one-third center-text column">
+          <div class="ic ic-lock-open"></div>
+          <h4>open</h4>
+          <p>No need for proprietary encryption or database formats. No need to a trust third-party to securely store your data. Hasher is <a href="https://www.github.com/VictorVation/hasher/">open source.</a> </p>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="row info">
+      <div class="eight columns offset-by-two">
+        <p>Let's say you have a password that you always use - we'll call this your <em>key</em>. It's a strong (and therefore hard for you to remember) password, with lots of mixed case letters and numbers.</p>
+        <p>Hasher generates a unique password for every website you visit, by <em>hashing</em> your key and the name of the site - meaning you can safely re-use the same key, but get completely different passwords for each site.</p>
+        <p>This project was inspired/based on/uses code from the excellent Hashpass Chrome Extension. For a more in-depth discussion on the the philosophy behind this project and a comparison between this and traditional password managers, check out the <a href="https://github.com/boyers/hashpass">Hashpass</a> Github repository.
+      </div>
+    </div>
+    <div class="footer row">
+      <div class="one-third center-text column">with &lt;3 by <a href="https://www.victorszeto.com">vis</a></div>
+      <div class="one-third center-text column">based on <a href="https://github.com/boyers/hashpass">boyers/hashpass</a></div>
+      <div class="one-third center-text column">check out the <a href="https://github.com/VictorVation/hasher">source</a></div>
     </div>
   </div>
-  <footer class="deep-purple">
-    <div class="container">
-      <div class="row">
-        <div class="col l6 m6 s12">
-          <p class="grey-text lighten-4">Created by <a class="blue-text lighten-2" href="http://mapleroyals.com/forum/members/vis.5827/">vis</a>. Price information taken from <a class="blue-text lighten-2" href="https://docs.google.com/spreadsheets/d/14n-0lQpuCR8l2ZDkAW4MrftpFWVhV9LkMVtqU7Dvbrk/edit#gid=0">Royals Price Sheet</a> compiled by <a class="blue-text lighten-2" href="http://mapleroyals.com/forum/members/ddatsik.5506/">Exoduss/ddatsik</a>. Thanks to <a class="blue-text lighten-2" href="http://mapleroyals.com/forum/members/kaizoku.3951/">Kaizoku</a> and <a class="blue-text lighten-2" href="http://mapleroyals.com/forum/members/4844/">Plenty</a> for the prices.</p>
-        </div>
-        <div class="col l6 m6 s12">
-        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-        <!-- royalsprices footer -->
-        <ins class="adsbygoogle"
-             style="display:inline-block;width:320px;height:100px"
-             data-ad-client="ca-pub-3628225346691969"
-             data-ad-slot="8058606130"></ins>
-        <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-        </script>
-        </div>
-      </div>
-    </div>
-    <div class="footer-copyright">
-      <div class="container">
-      made by <a class="deep-purple-text lighten-3" href="http://mapleroyals.com/forum/members/vis.5827/">vis</a> with <i class="mdi-action-favorite-outline"></i>
-      </div>
-    </div>
-  </footer>
 
-
-  <script src="js/prices-c5deaa21.js"></script>
-  </body>
+<!-- JavaScript
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  <script src="js/sjcl.js"></script>
+  <script src="js/hasher.js"></script>
+</body>
 </html>
